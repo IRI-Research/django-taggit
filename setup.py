@@ -8,7 +8,7 @@ with open('README.rst') as f:
 
 setup(
     name='django-taggit',
-    version='.'.join(str(i) for i in taggit.VERSION),
+    version='.'.join(str(i) for i in taggit.VERSION[:3]) + (("+" + taggit.VERSION[3]) if len(taggit.VERSION) > 3 else ""),
     description='django-taggit is a reusable Django application for simple tagging.',
     long_description=readme,
     author='Alex Gaynor',
